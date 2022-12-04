@@ -1,0 +1,34 @@
+{% extends "base_admin.html" %}
+
+{% block  content %}
+<h1>{{category.name}}</h1>
+<a  class="btn btn-primary" href="/admin/category" >back</a>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th style="width: 10px">Nama</th>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="/carform" class="danger">Nambah Mobil</a>
+      </li>
+      </tr>
+    </thead>
+    <tbody>
+      </tr>
+      {% for c in cars %}
+
+      <tr>
+        <td>{{c.name}}</td>
+        <td>{{c.price}}</td>
+        <td>{{c.colour}}</td>
+        <td >
+          <a class="btn btn-warning "href="/admin/category/cars/{{c.id}}/edit">Edit</a>
+        </td>
+        <td >
+          <a class="btn btn-danger "href="/admin/category/cars/{{c.id}}/delete">Delete</a>
+        </td>
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+{% endblock  content %}

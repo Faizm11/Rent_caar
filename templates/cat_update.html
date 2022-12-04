@@ -1,0 +1,24 @@
+{% extends 'base_admin.html' %}
+{% block content %}
+
+<div class="row" style="margin-top: 25px;">
+    <div class="col"></div>
+    <div class="col card shadow p-3 mb-5 bg-body rounded" style="height: 350px;">
+        <form action="/admin/category/{{id}}/update" method="POST">
+            <h2 style="text-align:center ;">Edit Jurnal</h2>
+            {{form.csrf_token}}
+            <div class="form-group">
+                {{form.name.label}}
+                {{form.name(class='form-control')}}
+            </div>
+        
+            <div class="form-group" style="margin-top: 90px;margin-left: 62%;">
+                <a href="/admin/category" class="btn btn-primary">Back</a>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="col"></div>
+</div>
+
+{% endblock content %}

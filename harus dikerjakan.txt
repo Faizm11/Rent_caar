@@ -1,0 +1,4 @@
+Minumum :
+-admin bisa login untuk admin 
+create catlog sama mobilnya 
+-user log in buat melihat catalog  

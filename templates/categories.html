@@ -1,0 +1,32 @@
+{%extends "base_admin.html" %}
+ 
+ {% block content %}
+ 
+<table class="table table-bordered">
+    <a href="/admin/category/create" class="btn btn-succes"><i class="fa-sharp fa-solid fa-plus"></i></a>
+    <thead>
+      <tr>
+        <th style="width: 10px">Nama</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+      </tr>
+      {% for c in categories %}
+
+      <tr>
+        <td>
+        <a > {{c.name}}</a>
+        </td>
+        <td style="width:277px ;">
+          <div class="form-group">
+              <a href="/admin/category/{{c.id}}/update" class="btn btn-success"><i class="fa-solid fa-pencil"></i></a>
+              <a href="/admin/category/{{c.id}}/delete" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+          </div>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+ {% endblock content %}
